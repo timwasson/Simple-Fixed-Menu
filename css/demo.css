@@ -1,0 +1,138 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,200);
+
+/* 
+
+The .topmenu, .active, and .section classes are what you'll use in your project. The other stuff is just for presentation to make the demo look better. Feel free to use it. Or not. Whatever. 
+
+*/
+
+.topmenu.fixed {
+	position: fixed;
+	top:0;
+}
+.topmenu {
+	position: absolute;
+	background-color: rgb(50,50,50);
+}
+.topmenu ul {
+	padding: 0;
+	margin: 0 auto;
+}
+.topmenu ul li {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+.topmenu ul li a {
+	color:#fff;
+	text-decoration: none;
+	display: block;
+	padding: 20px;
+}
+.active {
+	background-color: #9f0000;
+}
+.section {
+	/* This top padding should be set to offset the sticky menu when it's stuck to the top. */
+	position: relative;
+	z-index: 1;
+}
+.highlight {
+	/* Optional, but this is added to the scrolling element that is currently active */
+}
+
+/* 
+
+The following is just for presentation. 
+
+*/
+
+
+
+body {
+	margin: 0 auto;
+	padding: 0;
+	background: #f4f4f4;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 200;
+}
+h1 {
+	width:500px;
+	margin: 0 auto;
+	font-size:4em;
+}
+h1, h2, h3, h4 {
+	text-align: center;
+	text-shadow: 1px 1px 1px white;
+	font-weight: 200;
+}
+h3 {
+	padding: 0 0 30px 0;
+	font-size:2.2em;
+}
+p {
+	line-height: 1.8em;
+}
+.section {
+	background: #fff;
+	padding: 50px;
+	opacity: .5;
+}
+.active {
+	background-color: rgba(159,0,0,.5);
+	-webkit-transition: background-color 1s;
+}
+.topmenu {
+	text-align: center;
+	background-color:rgba(62,62,62,.85);
+	text-shadow: 1px 1px 1px black;
+}
+.topmenu.fixed {
+	box-shadow: 0px 0px 10px black;
+	transition: box-shadow 1s;
+	-webkit-transition: box-shadow .5s;
+}
+.highlight {
+	box-shadow: 0px 0px 30px rgba(0,0,0,.1);
+	transition: box-shadow 1s, opacity 1s;
+	-webkit-transition: box-shadow .5s, opacity .5s;
+	opacity: 1;
+}
+.copy {
+	text-align: center;
+	/* The huge top margin just makes it so you can scroll a lot to highlight everything */
+	margin: 450px 0 70px 0;
+}
+code.block {
+	display: block;
+	width:80%;
+	margin: 0 auto;
+}
+.demoitems {
+	text-align: center;
+}
+.demoitems h4 {
+	font-size: 2em;
+	text-align: left;
+}
+.demoitems p {
+	text-align: left;
+}
+.demoitems a {
+	background-color: grey;
+	color:#fff;
+	padding: 20px;
+	margin: 20px;
+	
+}
+
+/* For Mobile Devices */
+@media (max-width:480px) {
+	h1 { width:100%; }
+}
+@media (max-width:768px) {
+	.demoitems {
+		/* Hide this because the left-hand menu doesn't work on mobile. */
+		display: none;
+	}
+}

@@ -1,0 +1,26 @@
+.topmenu {
+	width:100%;
+	z-index:2;
+}
+.topmenu ul li {
+	display: inline-block;
+}
+.section {
+	width:600px;
+	margin: 50px auto;
+	z-index: 1;
+	position: relative;
+	top:80px;
+}
+@media only screen and (max-width: 600px) {
+	.section {
+		width:90%;
+		padding: 80px 1%;
+	}	
+}
+@media only screen and (max-width: 320px) {
+	.topmenu ul li a {
+		padding: 20px 10px;
+		font-size:.8em;
+	}
+}

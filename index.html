@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>  
+  <title>World's Easiest Sticky Top Menu</title>
+  
+  <!--[if lt IE 9]>
+     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  
+  <!-- Base style -->
+  <link rel="stylesheet" href="css/demo.css" />
+  
+  <!-- Positioning style -->
+  <link rel="stylesheet" href="css/demo-top.css" id="style" />
+  
+ 
+
+</head>
+<body>
+
+<h1>World's Easiest Sticky Menu</h1>
+<h2>with highlighted links as you scroll & stuff</h2>
+
+<nav class="topmenu">
+	<ul>
+		<li><a href="#howto">How To</a></li>
+		<li><a href="#beer">Beer</a></li>
+		<li><a href="#more">More info</a></li>
+		<li><a href="#soon">Coming Soon</a></li>
+	</ul>
+</nav>
+
+
+<div class="section" id="howto">
+	<h3>How to use this little chunk of jQuery.</h3>
+	<p>I tried to keep the code as simple and easy as possible. At the bottom of this file, you'll find some variables you need to fill in.</p>
+	<code class="block">
+		var stickyel = $(".topmenu");<br />
+		var sections = $(".section");<br />
+		var menupos = "side";
+	</code>
+	<p>Just replace <code>.topmenu</code> with the class name (or ID) of the element you want to stick to the top of the screen. Each individual item you're linking to should have the same class name. That class name should be stored in the <code>sections</code> variable. And finally, the <code>menupos</code> variable should be set to either <code>side</code> or <code>top</code>, depending on where you want it. 
+	<p>Once you get that set up, just link each menu item to an ID assigned to the section you want to scroll to. The rest of the magic is done for you. </p>
+	<div class="demoitems">
+	<h4 class="demohead">Top and side demo</h4>
+		<p>Click the buttons below to see the menu on either the top or side of the content. The code for each menu is stored in the <code>demo-left.css</code> or <code>demo-right.css</code> style sheets.</p>
+		<a id="topmenu">Top Menu</a><a id="sidemenu">Side Menu</a>
+	</div>
+</div>
+
+<div class="section" id="beer">
+	<h3>Buy me a beer.</h3>
+	<p>I like beer. So if you get some use out of this little chunk of jQuery, you should buy me one.</p>
+	<p>
+	<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="A5K69C9LXFZGL">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+	</p>
+</div>
+
+<div class="section" id="more">
+	<h3>More information & help</h3>
+	<p>This has been tested & verified to work Chrome, Firefox, IE8+, & iOS devices. If you've done additional testing or have enhancements to add to the project, please fork it on Github.</p>
+	<p>Out of the box, this little script provides:
+		<ul>
+			<li>Auto-sticking to the top of the page on scroll</li>
+			<li>Auto-highlighting of menu items as they become active</li>
+			<li>Basic "smooth scroll" to the selected menu item</li>
+		</ul>
+	</p>
+	<p>For styling via CSS, please note that the <code>.active</code> class is applied to the <code>&lt;a&gt;</code> element that is highlighted, and the <code>.highlight</code> class is applied to the active section. The section highlighting and smooth transitions are done via CSS3 transitions. </p>
+	<p>For more information on styling, just open the CSS files and get hackin'.</p>
+	<p>This is meant to be some simple code to serve as a starter for someone looking to implement a sticky navigation with highlighted content. Please take a look at the working code to see how it all works. If you have any questions, you can <a href="wasson@gmail.com">email me</a>.</p>
+</div>
+<div class="section" id="soon">
+	<h3>Coming Soon</h3>
+	<p>This is a work in progress. I plan on adding:</p>
+	<ul>
+		<li>Better mobile support</li>
+		<li>Better documentation</li>
+		<li>More configuration options</li>
+	</ul>
+</div>
+
+<p class="copy">&copy; 2013 tim wasson</p>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+//Define the variables for the sticky menu.
+var stickyel = $(".topmenu");	// Class name of the menu element you want to stick. 
+var sections = $(".section");	// Class of the individual sections you're scrolling to.
+var menupos = "side";			// If the menu is on the side or top.
+
+
+/* 
+
+Everything below is just to control the style sheet swapper. You can ignore it. 
+
+*/
+
+$("#topmenu").on("click",function() {
+	$("#style").attr("href", "css/demo-top.css");
+});
+
+$("#sidemenu").on("click",function() {
+	$("#style").attr("href", "css/demo-left.css");
+});
+
+</script>
+<script src="js/sfs.js"></script>
+
+</body>
+</html>
