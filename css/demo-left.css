@@ -1,0 +1,12 @@
+.topmenu {
+	width:200px;
+	z-index:2;
+}
+.section {
+	width:600px;
+	margin: 0 0 50px 200px;
+	z-index: 3;
+}
+body {
+	width:900px;
+}
